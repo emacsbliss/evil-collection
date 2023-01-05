@@ -173,7 +173,9 @@ with older release versions of `mu4e.'"
      "*" mu4e-headers-mark-for-something ; TODO: Don't override evil-seach-word-forward?
      "&" mu4e-headers-mark-custom
      "A" mu4e-headers-mark-for-action
-     "m" mu4e-headers-mark-for-move
+     ;; "m" mu4e-headers-mark-for-move
+     ;; QoL: to be consistent with dired
+     "m" mu4e-headers-mark-for-something
      "r" mu4e-headers-mark-for-refile
      "D" mu4e-headers-mark-for-delete
      "d" mu4e-headers-mark-for-trash
@@ -194,7 +196,11 @@ with older release versions of `mu4e.'"
      "zr" mu4e-headers-toggle-include-related
      "zt" mu4e-headers-toggle-threading
      "zd" mu4e-headers-toggle-skip-duplicates
-     "gl" mu4e-show-log
+     ;; "gl" mu4e-show-log
+     ;; QoL: I use gl for link-hint in most places
+     "gl" link-hint-open-link
+     ;; QoL: make gx to switch workspace
+     "gx" bliss-ws/switch-ws
      "gv" mu4e-select-other-view
      "T" (lambda ()
            (interactive)
@@ -213,8 +219,10 @@ with older release versions of `mu4e.'"
      [tab] shr-next-link
      [backtab] shr-previous-link
      "q" mu4e~view-quit-buffer
-     "gx" mu4e-view-go-to-url
-     "gX" mu4e-view-fetch-url
+     ;; "gx" mu4e-view-go-to-url
+     ;; "gX" mu4e-view-fetch-url
+     "gx" bliss-ws/switch-ws
+     "gl" link-hint-open-link
      "C" mu4e-compose-new
      "H" mu4e-view-toggle-html
      ;; "E"               mu4e-compose-edit
@@ -238,7 +246,9 @@ with older release versions of `mu4e.'"
      "x" mu4e-view-marked-execute
      "&" mu4e-view-mark-custom
      "*" mu4e-view-mark-for-something   ; TODO: Don't override "*".
-     "m" mu4e-view-mark-for-move
+     ;; "m" mu4e-view-mark-for-move
+     ;; QoL: to be consistent with dired
+     "m" mu4e-view-mark-for-something
      "r" mu4e-view-mark-for-refile
      "D" mu4e-view-mark-for-delete
      "d" mu4e-view-mark-for-trash
@@ -253,7 +263,7 @@ with older release versions of `mu4e.'"
      "zr" mu4e-headers-toggle-include-related
      "zt" mu4e-headers-toggle-threading
      "za" mu4e-view-toggle-hide-cited
-     "gl" mu4e-show-log
+     ;; "gl" mu4e-show-log
      "s" mu4e-view-search-edit
      "|" mu4e-view-pipe
      "." mu4e-view-raw-message
