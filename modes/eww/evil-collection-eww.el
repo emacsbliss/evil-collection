@@ -76,10 +76,15 @@
     (kbd "<backtab>") 'shr-previous-link
 
     ;; bookmarks
-    "gb" 'eww-list-bookmarks
+    ;; "gb" 'eww-list-bookmarks
+    ;; QoL: make it consistent
+    "gb" 'bliss-ws/switch-buffer
 
-    "gh" 'eww-list-histories
-    "gt" 'eww-list-buffers              ; Like dwb, qutebrowser.
+    ;; "gh" 'eww-list-histories
+    "gh" 'bliss-lookup/webjump
+    ;; "gt" 'eww-list-buffers              ; Like dwb, qutebrowser.
+    ;; QoL: make it consistent
+    "gt" 'bliss-ws/jump-to-last-ws
 
     ;; refresh
     "gr" 'eww-reload
