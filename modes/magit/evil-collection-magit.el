@@ -319,6 +319,11 @@ Move `magit-diff-default-context' to \"~\"."
        (,states magit-mode-map "\C-f"   evil-scroll-page-down)
        (,states magit-mode-map "\C-b"   evil-scroll-page-up)
        (,states magit-mode-map ":"     evil-ex)
+
+       ;; QoL: those keybindings I'm too used to
+       (,states magit-mode-map "gw"    ace-window)
+       (,states magit-mode-map "gb"    bliss-ws/switch-buffer)
+
        (,states magit-mode-map "q"     magit-mode-bury-buffer)
 
        ;; these are to fix the priority of the log mode map and the magit mode map
@@ -347,7 +352,11 @@ Move `magit-diff-default-context' to \"~\"."
          (,states magit-blame-read-only-mode-map "N" evil-search-previous)))
 
      `((,states magit-status-mode-map "gz"  magit-jump-to-stashes)
-       (,states magit-status-mode-map "gt"  magit-jump-to-tracked)
+
+       ;; QoL: those keybindings I'm too used to
+       ;; (,states magit-status-mode-map "gt"  magit-jump-to-tracked)
+       (,states magit-status-mode-map "gt"  bliss-ws/jump-to-last-ws)
+
        (,states magit-status-mode-map "gn"  magit-jump-to-untracked)
        (,states magit-status-mode-map "gu"  magit-jump-to-unstaged)
        (,states magit-status-mode-map "gs"  magit-jump-to-staged)
