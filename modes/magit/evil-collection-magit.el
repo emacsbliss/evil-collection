@@ -359,7 +359,13 @@ Move `magit-diff-default-context' to \"~\"."
 
        (,states magit-status-mode-map "gn"  magit-jump-to-untracked)
        (,states magit-status-mode-map "gu"  magit-jump-to-unstaged)
-       (,states magit-status-mode-map "gs"  magit-jump-to-staged)
+       ;; (,states magit-status-mode-map "gs"  magit-jump-to-staged)
+
+       ;; QoL: those keybindings I'm too used to
+       (,states magit-status-mode-map "gs"  evil-window-vsplit)
+       (,states magit-status-mode-map "gS"  evil-window-split)
+       (,states magit-status-mode-map "gx"  bliss-ws/switch-ws)
+
        (,states magit-status-mode-map "gfu" magit-jump-to-unpulled-from-upstream)
        (,states magit-status-mode-map "gfp" magit-jump-to-unpulled-from-pushremote)
        (,states magit-status-mode-map "gpu" magit-jump-to-unpushed-to-upstream)
