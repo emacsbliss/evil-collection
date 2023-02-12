@@ -173,9 +173,8 @@ with older release versions of `mu4e.'"
      "*" mu4e-headers-mark-for-something ; TODO: Don't override evil-seach-word-forward?
      "&" mu4e-headers-mark-custom
      "A" mu4e-headers-mark-for-action
-     ;; "m" mu4e-headers-mark-for-move
-     ;; QoL: to be consistent with dired
-     "m" mu4e-headers-mark-for-something
+     "m" mu4e-headers-mark-for-move
+     "M" mu4e-headers-mark-for-something
      "r" mu4e-headers-mark-for-refile
      "D" mu4e-headers-mark-for-delete
      "d" mu4e-headers-mark-for-trash
@@ -183,6 +182,8 @@ with older release versions of `mu4e.'"
      "u" mu4e-headers-mark-for-unmark
      "U" mu4e-mark-unmark-all
      "?" mu4e-headers-mark-for-unread
+     ;; QoL: ! is too hard to press
+     "e" mu4e-headers-mark-for-read
      "!" mu4e-headers-mark-for-read
      "%" mu4e-headers-mark-pattern
      "+" mu4e-headers-mark-for-flag
