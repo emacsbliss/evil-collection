@@ -161,7 +161,8 @@ F is the name of function, N is the pixel height."
     "J" 'xwidget-webkit-browse-url
 
     ;; Additional binding to browse tabs.
-    "gt" 'evil-collection-xwidget-webkit-search-tabs
+    "gt" 'bliss-ws/jump-to-last-ws
+    ;; "gt" 'evil-collection-xwidget-webkit-search-tabs
 
     "gr" 'xwidget-webkit-reload
     (kbd "C-f") 'xwidget-webkit-scroll-up
